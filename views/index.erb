@@ -1,0 +1,25 @@
+<h1> Do you think you're a world traveler?</h1>
+<h2>List all the places you have visited</h2>
+
+<form class="" action="/" method="post">
+
+</form>
+
+<form action="/" method="post">
+  <label for="place_name">Enter a place you've visited</label>
+  <input id="place_name" name ="place_name" type="text">
+
+  <label for="description">Describe the place</label>
+  <input id="description" name ="description" type="text">
+
+  <button type="submit" class="btn">Add</button>
+</form>
+
+<h2>You have been to:</h2>
+<ul>
+  <% Place.all.each do |place| %>
+   <li> <%= place.name %>,  <%= place.description %></li>
+  <% end %>
+</ul>
+
+<a href="/">Clear</a>
